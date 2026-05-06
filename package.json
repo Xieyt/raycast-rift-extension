@@ -1,0 +1,78 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "rift",
+  "title": "Rift Window Manager",
+  "description": "Window switching and workspace management for Rift window manager",
+  "icon": "rift-icon.png",
+  "author": "local-dev",
+  "license": "MIT",
+  "categories": [
+    "Productivity",
+    "Applications",
+    "System"
+  ],
+  "commands": [
+    {
+      "name": "switchWindowsFocused",
+      "title": "Switch Windows in Focused Workspace",
+      "description": "Switch between windows in the currently focused workspace",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "showWindowTitlesFirst",
+          "type": "checkbox",
+          "required": false,
+          "title": "Show Window Titles First",
+          "label": "Display window title as primary field",
+          "description": "Show window titles (e.g., document names, browser tabs) before app names",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "switchWindowsAll",
+      "title": "Switch Windows in All Workspaces",
+      "description": "Switch between windows across all workspaces",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "showWindowTitlesFirst",
+          "type": "checkbox",
+          "required": false,
+          "title": "Show Window Titles First",
+          "label": "Display window title as primary field",
+          "description": "Show window titles (e.g., document names, browser tabs) before app names",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "goToWorkspace",
+      "title": "Go to Workspace",
+      "description": "Switch to a different workspace",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "1.93.2",
+    "@raycast/utils": "1.19.1",
+    "shell-env": "4.0.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "20.8.10",
+    "@types/react": "^18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  },
+  "platforms": [
+    "macOS"
+  ]
+}

@@ -1,0 +1,9 @@
+PLACEHOLDER: Create a 512x512 PNG icon for Rift
+
+Options:
+1. Use an existing Rift logo/icon (if available)
+2. Create a simple geometric icon (e.g., overlapping windows)
+3. Use a placeholder from https://placehold.co/512x512/png
+4. Generate with: convert -size 512x512 xc:#6366f1 -pointsize 200 -gravity center -fill white -annotate +0+0 'R' rift-icon.png
+
+For now, Raycast will use a default icon until you add a proper one.
